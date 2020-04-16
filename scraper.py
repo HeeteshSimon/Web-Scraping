@@ -18,3 +18,6 @@ print(items[0].find(class_='period-name').get_text())
 print(items[0].find(class_='short-desc').get_text())
 #to get the temp of that period
 print(items[0].find(class_='temp').get_text())
+#Using list comprehension to get all the rest of the periods
+period_names=[items.find(class_='period-name').get_text() for items in items]
+print(period_names)
