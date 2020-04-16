@@ -29,7 +29,7 @@ temp=[items.find(class_='temp').get_text() for items in items]
 #print(period_names)
 #print(short_description)
 #print(temp)
-
+#Used pandas to print the data in Tabular form
 weather = pd.DataFrame(
     {
         'Period':period_names,
@@ -37,4 +37,5 @@ weather = pd.DataFrame(
         'Temperature':temp,
      })
 print(weather)
+#Extracted data is converted into a csv file
 weather.to_csv('weather_report.csv')
