@@ -1,5 +1,6 @@
 #import modules
 import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 #To get the URL for scraping
 page = requests.get('https://forecast.weather.gov/MapClick.php?lat=33.96746500000006&lon=-118.25679999999994#.Xpe2vsgzaMo')
@@ -25,6 +26,14 @@ short_description=[items.find(class_='short-desc').get_text() for items in items
 #getting all the temp
 temp=[items.find(class_='temp').get_text() for items in items]
 #print It
-print(period_names)
-print(short_description)
-print(temp)
+#print(period_names)
+#print(short_description)
+#print(temp)
+
+weather = pd.DataFrame(
+    {
+        'Period':period_names,
+        'Short_description':short_description,
+        'Temperature':temp,
+     })
+print(weather)
