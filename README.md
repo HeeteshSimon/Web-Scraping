@@ -1,5 +1,5 @@
 # Web-Scraping
-Scraping 7 days of weather!
+Scraping 7 days' weather!
 ## Installation:
 pip install requests <br>
 pip install BeautifulSoup4 <br>
