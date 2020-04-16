@@ -7,3 +7,5 @@ page = requests.get('https://forecast.weather.gov/MapClick.php?lat=33.9674650000
 soup = BeautifulSoup(page.content, 'html.parser')
 #print(soup)
 #print(soup.find_all('a'))
+week = soup.find(id="seven-day-forecast-body")
+print(week)
