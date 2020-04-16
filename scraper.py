@@ -14,3 +14,4 @@ items = soup.find_all(class_='tombstone-container')
 #print(items[0])
 #to get the period name only we can use get_text() coz bs4 can detect it as object
 print(items[0].find(class_='period-name').get_text())
+print(items[0].find(class_='short-desc').get_text())
