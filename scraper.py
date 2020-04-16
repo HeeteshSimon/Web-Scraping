@@ -13,11 +13,18 @@ week = soup.find(id="seven-day-forecast-body")
 items = soup.find_all(class_='tombstone-container')
 #print(items[0])
 #to get the period name only we can use get_text() coz bs4 can detect it as object
-print(items[0].find(class_='period-name').get_text())
+#print(items[0].find(class_='period-name').get_text())
 #to get the short description of period
-print(items[0].find(class_='short-desc').get_text())
+#print(items[0].find(class_='short-desc').get_text())
 #to get the temp of that period
-print(items[0].find(class_='temp').get_text())
+#print(items[0].find(class_='temp').get_text())
 #Using list comprehension to get all the rest of the periods
 period_names=[items.find(class_='period-name').get_text() for items in items]
+#getting all the short desc
+short_description=[items.find(class_='short-desc').get_text() for items in items]
+#getting all the temp
+temp=[items.find(class_='temp').get_text() for items in items]
+#print It
 print(period_names)
+print(short_description)
+print(temp)
